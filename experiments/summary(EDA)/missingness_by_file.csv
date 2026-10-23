@@ -1,0 +1,7 @@
+file,rows_scanned,ingest_lib_missing_pct,normalized_smiles_missing_pct,inchikey_missing_pct,inchikey14_missing_pct,molecular_formula_missing_pct,ionization_mode_missing_pct,instrument_type_missing_pct,adduct_missing_pct,adduct_orig_missing_pct,precursor_mz_missing_pct,precursor_error_ppm_missing_pct,num_peaks_missing_pct,base_peak_intensity_missing_pct,collision_energy_ev_missing_pct,collision_energy_orig_missing_pct,collision_energy_orig_units_missing_pct
+train1.csv,423268,0.0,0.0,0.0,0.0,0.0,0.0,0.601,0.0,0.0,0.0,0.0,0.0,0.601,0.601,0.601,0.0
+train2.csv,423268,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+train3.csv,423268,0.0,0.0,0.0,0.0,0.0,0.0,0.046,0.0,0.0,0.0,0.011,0.0,0.0,26.809,26.809,0.0
+train4.csv,423268,0.0,0.0,0.0,0.0,0.0,0.0,3.427,0.0,0.0,0.0,0.949,0.0,74.478,33.707,31.878,0.0
+train5.csv,423268,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.036,0.0,100.0,0.0,0.0,0.0
+train6.csv,423268,0.0,0.0,0.0,0.0,0.0,0.0,4.124,0.0,0.0,0.0,0.017,0.0,99.72,18.606,16.424,0.0

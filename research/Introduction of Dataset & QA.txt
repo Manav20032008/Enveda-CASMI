@@ -1,0 +1,65 @@
+Q.why the mass-to-ratio determines the signal intensity on graph ?
+-> it doesn't change the physical abundance of the chemical molecule ,
+    1. Charge state multiplicity:
+    we can't change the mass of the moelcule due to it's fix structure but we can change the charge on it such that we can change the m/z ratio and one more thing , at lower m/z ration moelcule shows the higher intensity and usually the multiple peaks & such that base line peak intensity going to very high is generally at the lower the m/z ratio and it's always less than the precursor m/z.
+    
+    2.Ion Stability and Abundance :
+    -height of the peak == Relative Abundance of that ion fragment ,
+    -more stable ion -> taller peak
+    -The base peak is the most intense peak (set to 100% relative intensity) representing the most stable and abundant ion in the spectrum.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+Q.How to change the m/z ?
+->  1.change mass(via adduct) :
+    -Protonation/Deprotonation: Adding a proton (H+) increases the mass by ≈1.007 u.      
+    For a singly charged ion [M+H]+, the m/z is M+1.007. 
+    
+    -Metal Adducts: Attaching metal ions like Sodium (Na+,≈22.99 u) or Potassium (K+,≈39.10 u) more increases the m/z value compared to the protonated form.
+    
+    2.change charge(Electrospray Ionization) 
+    
+    3.fragmentaion
+    Breaking the molecule into smaller pieces changes the mass m of the resulting ions.
+
+    Fragment Ions: If a molecular ion with mass M fragments, the resulting smaller ions will have lower m/z values.
+    Neutral Loss: The loss of neutral fragments (like water or methyl groups) from the molecular ion creates peaks at lower m/z values corresponding to the remaining charged fragment.
+    
+    
+    
+    
+    
+Q.Why to change the m/z ratio VS Intensity ?
+-> so why m/z instead of the only m is :- Instrument can't detected it if the molecule is neutral , we add adduct into that and then we measure the m/z ration such that we can get data through the instrument .
+[
+{Adduct} Test spectra use one of ten adducts: [M+H]+, [M+NH4]+, [M-H2O+H]+, [M-2H2O+H]+, [M+Na]+, [M+K]+, [M-H]-, [M-H2O-H]-, [M+CH2O2-H]-, [M+Cl]-. The training set contains many more.
+]
+and now intensity means no. of the molecule hitted to the instrument at various m/z ratio of the same molecule.
+
+
+
+
+
+
+
+
+DATA FLOW :
+1. The Ion Data (Narrowing Down the Formula)
+{precursor_mz & adduct & ionization_mode}:
+These three work together to calculate the exact neutral mass of the intact molecule.
+
+2. The Fragmentation (The Core Match)
+{ms2_mzs & ms2_normalized_intensities}:
+The m/z values of the fragments paired with their relative intensities form a unique spectral fingerprint. Find similar entry from the databaase.
+
+3. The Experimental values (Ensuring an Accurate Match)
+{collision_energy_ev & instrument_type & base_peak_intensity}:
+Molecules fragment differently depending on how much energy is slammed into them, and different mass spectrometers handle fragmentation slightly differently.Base peak will helps with quality control, ensuring the signal to noise ratio is high enough to trust the fragment peaks.
+
